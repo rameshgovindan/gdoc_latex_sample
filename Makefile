@@ -8,7 +8,7 @@ TARGET=$(NAME).pdf
 DOCS_LINK=https://docs.google.com/document/d/1RnQewCHXls6r4rFZTgfdb7j_9u7keZzbOAC074LYA4Y/export?format=txt
 
 # This line should not change; however, you can customize the template.tex for the conference
-PANDOC_FLAGS=-s --template=template.tex -f markdown+yaml_metadata_block -t latex
+PANDOC_FLAGS=-s -N --template=template.tex -f markdown+yaml_metadata_block -t latex
 
 # Customize the line below to change the bib file and the csl file (either ieee or acm)
 BIBLIO_FLAGS=--bibliography=mybib.bib --csl=acm.csl
