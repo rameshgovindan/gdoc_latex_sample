@@ -181,8 +181,14 @@ $header-includes$
 $endfor$
 
 $if(subparagraph)$
-\renewcommand{\paragraph}[1]{\noindent\textbf{#1}}
-\renewcommand{\subparagraph}[1]{\noindent\emph{#1}}
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph*{#1}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph*{#1}\mbox{}}
+\fi
 $else$
 % Redefines (sub)paragraphs to behave more like sections
 \ifx\paragraph\undefined\else
