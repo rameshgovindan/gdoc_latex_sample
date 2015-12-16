@@ -181,6 +181,8 @@ $header-includes$
 $endfor$
 
 $if(subparagraph)$
+\renewcommand{\paragraph}[1]{\noindent\textbf{#1}}
+\renewcommand{\subparagraph}[1]{\noindent\emph{#1}}
 $else$
 % Redefines (sub)paragraphs to behave more like sections
 \ifx\paragraph\undefined\else
