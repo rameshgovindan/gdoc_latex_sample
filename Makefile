@@ -35,7 +35,7 @@ trigger $(NAME).trig:
 # This fetches the shared source from Google docs
 $(NAME).tex: $(NAME).trig
 	wget --no-check-certificate -O$(NAME).mdt $(DOCS_LINK)
-	iconv -c -t ASCII//TRANSLIT $(NAME).mdt | sed -e 's/\[[a-z]*]//g' -e '/end{document}/q' -e '/%/a\ ' | awk '{if (/^#/) print ""; print $0}' > $(NAME).mdtt
+	iconv -c -t ASCII//TRANSLIT $(NAME).mdt | sed -e 's/\[[a-z]*]//g' -e '/^# Bibliography/q' -e '/%/a\ ' | awk '{if (/^#/) print ""; print $0}' > $(NAME).mdtt
 	cat $(YAML_METADATA) $(NAME).mdtt > $(NAME).md
 	rm $(NAME).mdt $(NAME).mdtt
 	pandoc $(PANDOC_FLAGS) $(BIBLIO_FLAGS) $(NAME).md > $(NAME).tex
