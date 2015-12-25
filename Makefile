@@ -35,8 +35,9 @@ trigger $(NAME).trig:
 # This fetches the shared source from Google docs
 $(NAME).tex: $(NAME).trig
 	wget --no-check-certificate -O$(NAME).mdt $(DOCS_LINK)
-	cat $(YAML_METADATA) $(NAME).mdt > $(NAME).mdtt
-	iconv -c -t ASCII//TRANSLIT $(NAME).mdtt | sed -e 's/\[[a-z]*]//g' -e '/end{document}/q' -e '/%/a\ ' > $(NAME).md
+#	iconv -c -t ASCII//TRANSLIT $(NAME).mdt | sed -e 's/\[[a-z]*]//g' -e '/end{document}/q' -e '/%/a\ ' | python sanitize.py > $(NAME).mdtt
+	python sanitize.py $(NAME).mdt > $(NAME).mdtt
+	cat $(YAML_METADATA) $(NAME).mdtt > $(NAME).md
 	rm $(NAME).mdt $(NAME).mdtt
 	pandoc $(PANDOC_FLAGS) $(BIBLIO_FLAGS) $(NAME).md > $(NAME).tex
 
