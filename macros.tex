@@ -1,2 +1,31 @@
-\newcommand{\parab}[1]{\paraspace\noindent{\bf #1. } }
-\newcommand{\parae}[1]{\paraspace\noindent{\em #1. } }
+%%%%% Squeezing space before sections, subsections, and re-defining
+%%%%% paragraphs
+\makeatletter
+\let\origsection\section
+\let\origsubsection\subsection
+\let\origparagraph\paragraph
+
+\renewcommand\section{\@ifstar{\starsection}{\nostarsection}}
+\renewcommand\subsection{\@ifstar{\starsubsection}{\nostarsubsection}}
+\renewcommand\paragraph{\@ifstar{\starpara}{\nostarpara}}
+
+%% Change these
+\newcommand\sectionprelude{\vspace{0em}}
+\newcommand\sectionpostlude{\vspace{0em}}
+\newcommand\subsectionprelude{\vspace{0em}}
+\newcommand\subsectionpostlude{\vspace{0em}}
+\newcommand\paraspace{\vspace*{0ex}}
+
+\newcommand\nostarsection[1]{\sectionprelude\origsection{#1}\sectionpostlude}
+\newcommand\starsection[1]{\sectionprelude\origsection*{#1}\sectionpostlude}
+
+\newcommand\nostarsubsection[1]{\subsectionprelude\origsubsection{#1}\subsectionpostlude}
+\newcommand\starssubection[1]{\subsectionprelude\origsubsection*{#1}\subsectionpostlude}
+
+\newcommand\starpara[1]{\paraspace\noindent\origparagraph*{\textbf{#1}}}
+\newcommand\nostarpara[1]{\paraspace\noindent\origparagraph*{\textbf{#1}}}
+
+\newcommand\subparagraph[1]{\paraspace\noindent\origparagraph*{\textit{#1}}}
+
+\makeatother
+
