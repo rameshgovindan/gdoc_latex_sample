@@ -25,7 +25,34 @@
 \newcommand\starpara[1]{\paraspace\noindent\origparagraph*{\textbf{#1}}}
 \newcommand\nostarpara[1]{\paraspace\noindent\origparagraph*{\textbf{#1}}}
 
-\newcommand\subparagraph[1]{\paraspace\noindent\origparagraph*{\textit{#1}}}
+\providecommand\subparagraph[1]{\paraspace\noindent\origparagraph*{\textit{#1}}}
 
 \makeatother
+
+%%% Backref magic
+\DefineBibliographyStrings{english}{%
+  backrefpage = {Cited on page},
+  backrefpages = {Cited on pages},
+}
+\renewbibmacro{pageref}{%
+  \iflistundef{pageref}
+    {\printtext[parens]{Not Cited}} 
+    {%
+     \printtext[parens]{\ifnumgreater{\value{pageref}}{1}   
+       {\bibstring{backrefpages}\ppspace} 
+       {\bibstring{backrefpage}\ppspace}
+       \printlist [pageref][-\value{listtotal}]{pageref}}}}    
+
+\DeclareListFormat{pageref}{%
+     % == 2 references
+    \ifthenelse{\value{liststop} < 3}{\ifthenelse{\value{listcount}<\value{liststop}}{\hyperpage{#1} and }{\hyperpage{#1}}} %
+    { % > 2 references
+        \ifthenelse{\value{listcount}<\value{liststop}}
+          {\hyperpage{#1}\addcomma\addspace}
+          {\ifnumequal{\value{listcount}}{\value{liststop}}
+            {and \hyperpage{#1}}
+            {}%
+          }%
+    }%  
+}
 

@@ -4,14 +4,17 @@
 NAME=paper
 TARGET=$(NAME).pdf
 
-# Change the line below to contain an export URL. Make sure the sharing mode on the Doc is set to "anyone with link can view"
+# Change the line below to contain an export URL.
+# Make sure the sharing mode on the Doc is set to "anyone with link can view"
 DOCS_LINK=https://docs.google.com/document/d/1RnQewCHXls6r4rFZTgfdb7j_9u7keZzbOAC074LYA4Y/export?format=txt
 
 # This line should not change; however, you can customize the template.tex for the conference
 PANDOC_FLAGS=-s -N --template=template.tex -f markdown+yaml_metadata_block -t latex
 
 # Customize the line below to change the bib file and the csl file (either ieee or acm)
-BIBLIO_FLAGS=--bibliography=mybib.bib --csl=acm.csl
+# and to use pandoc-citeproc or biblatex (the latter is the default)
+# BIBLIO_FLAGS=--bibliography=mybib.bib --csl=acm.csl
+BIBLIO_FLAGS=--bibliography=mybib.bib --biblatex
 
 # This file contains title, authors and abstract, and other Pandoc metadata including bibliography
 YAML_METADATA=config.yaml
@@ -43,6 +46,7 @@ $(NAME).tex: $(NAME).trig
 # Iterate on latex until cross references don't change
 $(NAME).pdf: $(NAME).tex
 	pdflatex $(NAME)
+	biber $(NAME)
 	pdflatex $(NAME)
 	pdflatex $(NAME)
 
