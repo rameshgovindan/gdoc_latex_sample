@@ -46,7 +46,7 @@ $(NAME).tex: $(NAME).trig
 # Iterate on latex until cross references don't change
 $(NAME).pdf: $(NAME).tex
 	pdflatex $(NAME)
-	biber $(NAME)
+	bibtex $(NAME)
 	pdflatex $(NAME)
 	pdflatex $(NAME)
 
