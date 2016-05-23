@@ -97,7 +97,7 @@ $if(natbib)$
 \bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
 $endif$
 $if(biblatex)$
-\usepackage[backend=bibtex,style=numeric,hyperref=true,backref=true]{biblatex}
+\usepackage[backend=bibtex,style=numeric,hyperref=true,backref=true,maxnames=99]{biblatex}
 $for(bibliography)$
 \addbibresource{$bibliography$}
 $endfor$
