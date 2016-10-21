@@ -1,0 +1,316 @@
+% Useful macros for paper writing
+
+%%%%%%%%%%%%%%%%%%%%%%%%% PROPOSAL OR PAPER-SPECIFIC MACROS
+\newcommand{\percs}{{\small\textsf{PERCS}}\xspace}
+\newcommand{\hl}{Headlight\xspace}
+\newcommand{\idat}{Headlight\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% PAGINATION
+% \linepenalty=10000
+% \frenchspacing
+\setlength{\textwidth}{6.5in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{9.0in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\parindent}{15pt}
+\setlength{\parskip}{0.1\baselineskip}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% USEFUL LATIN ABBREVS
+\newcommand{\etc}{\emph{etc.}\xspace}
+\newcommand{\ie}{\emph{i.e.,}\xspace}
+\newcommand{\eg}{\emph{e.g.,}\xspace}
+\newcommand{\etal}{\emph{et al.}\xspace}
+
+%\newcommand{\reducefiguretopvmargin}{\vspace*{0ex}}
+%\newcommand{\reducefigurebottomvmargin}{\vspace*{0.0ex}}
+
+%%%%%%%%%%%%%%%%%%%%%%%% REFERENCES
+\newcommand{\secref}[1]{Section~\ref{sec:#1}}
+\newcommand{\equaref}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\figref}[1]{Figure~\ref{fig:#1}}
+\newcommand{\algref}[1]{Alg.~(\ref{alg:#1})}
+\newcommand{\ruleref}[1]{\textsc{Rule}~\ref{rule:#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%% MATH
+\newtheorem{rul}{Rule}
+\newcommand{\script}[1]{{{\cal{#1}}}}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{proposition}[theorem]{Proposition}
+%\newtheorem{corollary}[theorem]{Corollary}
+
+% define fonts
+\newcommand{\vct}[1]{\boldsymbol{#1}} % vector
+\newcommand{\mat}[1]{\boldsymbol{#1}} % matrix
+
+%%%% Special math symbols
+\newcommand{\field}[1]{\mathbb{#1}}
+\newcommand{\R}{\field{R}} % real domain
+%\newcommand{\C}{\field{C}} % complex domain
+\newcommand{\F}{\field{F}} % functional domain
+%\newcommand{\T}{^{\top}\!\!} % transpose
+\newcommand{\T}{^{\textrm T}} % transpose
+
+%%% define constant
+\newcommand{\cst}[1]{\mathsf{#1}}
+
+%% operator in linear algebra, functional analysis
+\newcommand{\inner}[2]{#1\cdot #2}
+\newcommand{\norm}[1]{\|#1\|}
+\newcommand{\twonorm}[1]{\|#1\|_2^2}
+% operator in functios, maps such as M: domain1 --> domain 2
+\newcommand{\Map}[1]{\mathcal{#1}}
+
+% operator in probability: expectation, covariance, 
+\newcommand{\ProbOpr}[1]{\mathbb{#1}} 
+% independence
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+% conditional independence
+\newcommand{\cind}[3]{{#1} \independent{#2}\,|\,#3}
+% conditional expectation
+\newcommand{\cndexp}[2]{\ProbOpr{E}\,[ #1\,|\,#2\,]}
+% operator in optimization
+\DeclareMathOperator{\argmax}{arg\,max}
+\DeclareMathOperator{\argmin}{arg\,min}
+\newcommand{\todo}[1]{{\color{red}#1}}
+
+% environment
+\newtheorem{thm}{Theorem}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{warning}[theorem]{Warning}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\def\pnorm#1#2{\left\| #2 \right\|_{#1}}
+\def\norm#1{\left\| #1 \right\|}
+\def\maxnorm#1{\| #1 \|_{\max} }
+\def\fnorm#1{\left\| #1 \right\|_{F}}
+\def\expec#1#2{\mbox{\rm E}_{#1}\left[ #2 \right]}
+\def\worst#1{\mbox{W}\left[ #1 \right]}
+\def\average#1#2{\mbox{AVG}_{#1}\left[ #2 \right]}
+\def\sizeof#1{\left|#1  \right|}
+\def\prob#1#2{\mbox{\rm Pr}_{#1}\left[ #2 \right]}
+\def\setof#1{\left\{{\let\st\colon #1 }\right\}}
+\def\Zdn{\mathbb{Z}^d_n}
+
+
+
+\def\vs#1#2#3{#1_{#2},\dots,#1_{#3}}
+
+\def\allones{\mathbf{1}}
+\def\origin{\mathbf{0}}
+
+\def\aa{\mathbf{a}} \def\bb{\mathbf{b}} \def\cc{\mathbf{c}} \def\ee{\mathbf{e}} \def\00{\mathbf{0}} \def\ggg{\mathbf{g}} \def\hh{\mathbf{h}}
+\def\uu{\mathbf{u}} \def\vv{\mathbf{v}} \def\xx{\mathbf{x}} \def\yy{\mathbf{y}}
+\def\AA{\mathbf{A}} \def\BB{\mathbf{B}} \def\LL{\mathbf{L}} \def\PP{\mathbf{P}} \def\UU{\mathbf{U}}
+\def\pp{\mathbf{p}} \def\qq{\mathbf{q}} \def\rr{\mathbf{r}} \def\ss{\mathbf{s}}
+\def\ttt{\mathbf{t}} \def\xx{\mathbf{x}} \def\yy{\mathbf{y}} \def\ZZ{\mathbb{Z}}
+\def\zz{\mathbf{z}} \def\LL{\mathbf{L}} \def\RR{\mathbf{R}} \def\MM{\mathbf{L}}
+\def\NN{\mathbf{R}} \def\calG{\mathcal{G}} \def\calA{\mathcal{C}_A} \def\calI{\mathcal{C}_I}
+\def\calS{\mathcal{S}} \def\calP{\mathcal{P}} \def\calC{\mathcal{C}}
+\def\size#1{Size[#1]}
+\def\bbE{\mathbb{E}} \def\ZZ#1#2{\mathbb{Z}^{#1}_{#2}} \def\ww{\mathbf{w}}
+\def\calF{\mathcal{F}}
+\def\calH{\cal H}
+
+\def\xxtil{\mathbf{\tilde{x}}}
+\def\pleq{\preccurlyeq}
+\def\pgeq{\succcurlyeq}
+\def\pinv#1{{#1}^{\dagger}}
+
+\def\symP{\mathbb{P}}
+\def\Reals#1{\mathbb{R}^{#1}}
+\def\orig#1{\bar{#1}}
+
+
+\def\Wtil{\tilde{W}}
+\def\Gtil{\tilde{G}}
+
+\def\rank#1{\mbox{\rm rank}\left( #1 \right)}
+\def\Integers#1{\mathbb{Z}^{#1}}
+
+\newcommand{\eat}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%% FIGURES OF VARIOUS KINDS
+%%%%%%%%%%%%%%%%%%%%%%% Assumption: all figures are in figs directory
+
+% Single image: location, scaling factor, caption
+% sample: \scaleImage{h}{0.47}{K-ei3}{Performance under external
+% interference}{label}
+
+\newcommand{\scaleImage}[5]{
+\begin{figure}[#1]
+\centering
+\includegraphics[width=#2\textwidth]{figures/#3}
+%\reducefigurecaptionmargin
+\caption{#4\label{fig:#5}}
+%\reducefigurebottomvmarginsmall
+\end{figure}
+}
+
+% args: side (l/r), width, filename, caption, label
+% sample: \wrapImage{l}{2in}{rr.eps}{Privacy User Study}{label}
+\newcommand{\wrapImage}[5]{
+\begin{wrapfigure}{#1}{#2}
+\centering
+\includegraphics[width=#2]{figures/#3}
+%\reducefigurecaptionmargin
+\caption{#4\label{fig:#5}}
+%\reducefigurebottomvmarginsmall
+\end{wrapfigure}
+}
+
+% Multiple subimages in across page: subimages, caption, label
+% Sample:
+% \fullColumnFigs { 
+% \subImage{0.22}{K-accuracy11b}{802.11b}{label}
+% \subImage{0.22}{K-accuracy11a}{802.11a}{label}
+% } {LIR of link pairs which \POLICE determined to be
+% \textit{interfering} (squares) and \textit{non-interfering}
+% (diamonds)} {accuracy}
+
+\newcommand{\fullColumnFigs}[3]
+{
+\begin{figure*}[!tb]
+  \centering
+  {#1}
+%\reducefigurecaptionmargin
+\caption{#2\label{fig:#3}}
+%\reducefigurebottomvmargin
+\end{figure*}
+}
+
+\newcommand{\scaleTable}[4]{
+\begin{table}[#1]
+\centering
+\includegraphics[width=#2\textwidth]{figures/#3}
+%\reducefigurecaptionmargin
+\caption{#4\label{tbl:#3}}
+%\reducefigurebottomvmarginsmall
+\end{table}
+}
+
+% Multiple subimages in one column: subimages, caption, label
+% Sample:
+% \oneColumnFigs { 
+% \subImage{0.22}{K-accuracy11b}{802.11b}
+% \subImage{0.22}{K-accuracy11a}{802.11a} 
+% } {LIR of link pairs which \POLICE determined to be
+% \textit{interfering} (squares) and \textit{non-interfering}
+% (diamonds)} {accuracy}
+
+\newcommand{\oneColumnFigs}[3]
+{
+\begin{figure}[t]
+  \centering
+  {#1}
+%\reducefigurecaptionmargin
+\caption{#2\label{fig:#3}}
+%\reducefigurebottomvmargin
+\end{figure}
+}
+
+% Subimage used above: width percentage, filename, caption
+\newcommand{\subImage}[4]{% width, filename1, caption1, label1
+    \hspace*{-2.0ex}
+    \subfigure[#3]
+    {
+      \includegraphics[width=#1\textwidth]{figures/#2}
+      \label{fig:#4}
+    }
+}
+
+\newcommand{\subImagePadded}[5]{% figure_width, hpadding, filename1, caption1, label1
+    \subfigure[#4]
+    {
+      \hspace{#2\textwidth}
+      \includegraphics[width=#1\textwidth]{figures/#3}
+      \hspace{#2\textwidth}
+      \label{fig:#5}
+    }
+}
+
+\newcommand{\subImageWithNoLabel}[2]{% width, filename1, caption1, label1
+      \includegraphics[width=#1\textwidth]{figures/#2}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PDFLATEX HACK
+\epstopdfsetup{suffix=}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "paper"
+%%% End: 
+
+
+
+%%%%% Squeezing space before sections, subsections, and re-defining
+%%%%% paragraphs
+\makeatletter
+\let\origsection\section
+\let\origsubsection\subsection
+\let\origparagraph\paragraph
+
+\renewcommand\section{\@ifstar{\starsection}{\nostarsection}}
+\renewcommand\subsection{\@ifstar{\starsubsection}{\nostarsubsection}}
+\renewcommand\paragraph{\@ifstar{\starpara}{\nostarpara}}
+
+%% Change these
+\newcommand\sectionprelude{\vspace{0em}}
+\newcommand\sectionpostlude{\vspace{0em}}
+\newcommand\subsectionprelude{\vspace{0em}}
+\newcommand\subsectionpostlude{\vspace{0em}}
+\newcommand\paraspace{\vspace*{-0.5ex}}
+
+\newcommand\nostarsection[1]{\sectionprelude\origsection{#1}\sectionpostlude}
+\newcommand\starsection[1]{\sectionprelude\origsection*{#1}\sectionpostlude}
+
+\newcommand\nostarsubsection[1]{\subsectionprelude\origsubsection{#1}\subsectionpostlude}
+\newcommand\starssubection[1]{\subsectionprelude\origsubsection*{#1}\subsectionpostlude}
+
+\newcommand\starpara[1]{\paraspace\noindent\origparagraph*{\textbf{#1}}}
+\newcommand\nostarpara[1]{\paraspace\noindent\origparagraph*{\textbf{#1}}}
+
+\providecommand\subparagraph[1]{\paraspace\noindent\origparagraph*{\textit{#1}}}
+
+\makeatother
+
+%%% Backref magic
+\DefineBibliographyStrings{english}{%
+  backrefpage = {Cited on page},
+  backrefpages = {Cited on pages},
+}
+\renewbibmacro{pageref}{%
+  \iflistundef{pageref}
+    {\printtext[parens]{Not Cited}} 
+    {%
+     \printtext[parens]{\ifnumgreater{\value{pageref}}{1}   
+       {\bibstring{backrefpages}} 
+       {\bibstring{backrefpage}}
+       \printlist [pageref][-\value{listtotal}]{pageref}}}}    
+
+\DeclareListFormat{pageref}{%
+     % == 2 references
+    \ifthenelse{\value{liststop} < 3}{\ifthenelse{\value{listcount}<\value{liststop}}{\hyperpage{#1} and }{\hyperpage{#1}}} %
+    { % > 2 references
+        \ifthenelse{\value{listcount}<\value{liststop}}
+          {\hyperpage{#1}\addcomma\addspace}
+          {\ifnumequal{\value{listcount}}{\value{liststop}}
+            {and \hyperpage{#1}}
+            {}%
+          }%
+    }%  
+}
+
