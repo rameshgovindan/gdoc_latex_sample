@@ -1,4 +1,36 @@
-%%% Macros for convenience
+%%%%% Squeezing space before sections, subsections, and re-defining
+%%%%% paragraphs
+\makeatletter
+\let\origsection\section
+\let\origsubsection\subsection
+\let\origparagraph\paragraph
+
+%% ACMart stuff
+\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference info
+\setcopyright{none}
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+%\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+\settopmatter{printacmref=false, printccs=false, printfolios=true}
+% DOI
+\acmDOI{}
+% ISBN
+\acmISBN{}
+%Conference
+\acmConference[Submitted for review to SIGCOMM]{}
+\acmYear{2018}
+\copyrightyear{}
+%% {} with no args suppresses printing of the price
+\acmPrice{}
+
+\renewcommand\section{\@ifstar{\starsection}{\nostarsection}}
+\renewcommand\subsection{\@ifstar{\starsubsection}{\nostarsubsection}}
+\renewcommand\paragraph{\@ifstar{\starpara}{\nostarpara}}
+
 %% References
 \newcommand{\secref}[1]{\S\ref{sec:#1}}
 \newcommand{\figref}[1]{Figure~\ref{fig:#1}}
@@ -10,22 +42,28 @@
 \newcommand{\eg}{\emph{e.g.,}\xspace}
 \newcommand{\etal}{\emph{et al.}\xspace}
 
-%%%%% Squeezing space before sections, subsections, and re-defining
-%%%%% paragraphs
-\makeatletter
-\let\origsection\section
-\let\origsubsection\subsection
-\let\origparagraph\paragraph
+%% For anonymity
+\newcommand{\goog}{Google\xspace}
+\newcommand{\bt}{B2\xspace}
+\newcommand{\bfour}{B4\xspace}
+\newcommand{\bfsite}{B4 Site\xspace}
+\newcommand{\tes}{TE Server\xspace}
+\newcommand{\bfgw}{Gateway\xspace}
+\newcommand{\fcs}{FCS\xspace}
+\newcommand{\ofc}{OFC\xspace}
+\newcommand{\rcs}{RCS\xspace}
+\newcommand{\cbr}{Cluster BR\xspace}
+\newcommand{\espresso}{Espresso\xspace}
 
-\renewcommand\section{\@ifstar{\starsection}{\nostarsection}}
-\renewcommand\subsection{\@ifstar{\starsubsection}{\nostarsubsection}}
-\renewcommand\paragraph{\@ifstar{\starpara}{\nostarpara}}
+%% Useful commands
+\newcommand{\circletext}[1]{{\large\textcircled{\footnotesize #1}}}
+
 
 %% Change these
-\newcommand\sectionprelude{\vspace{0em}}
-\newcommand\sectionpostlude{\vspace{0em}}
-\newcommand\subsectionprelude{\vspace{0em}}
-\newcommand\subsectionpostlude{\vspace{0em}}
+\newcommand\sectionprelude{\vspace{0ex}}
+\newcommand\sectionpostlude{\vspace{0ex}}
+\newcommand\subsectionprelude{\vspace{0ex}}
+\newcommand\subsectionpostlude{\vspace{0ex}}
 \newcommand\paraspace{\vspace*{0ex}}
 
 \newcommand\nostarsection[1]{\sectionprelude\origsection{#1}\sectionpostlude}
@@ -37,34 +75,34 @@
 \newcommand\starpara[1]{\paraspace\noindent\origparagraph*{\textbf{#1}}}
 \newcommand\nostarpara[1]{\paraspace\noindent\origparagraph*{\textbf{#1}}}
 
-\providecommand\subparagraph[1]{\paraspace\noindent\origparagraph*{\textit{#1}}}
+\providecommand\parae[1]{\paraspace\noindent\origparagraph*{\textit{#1}}}
 
 \makeatother
 
 %%% Backref magic
-\DefineBibliographyStrings{english}{%
-  backrefpage = {Cited on page},
-  backrefpages = {Cited on pages},
-}
-\renewbibmacro{pageref}{%
-  \iflistundef{pageref}
-    {\printtext[parens]{Not Cited}} 
-    {%
-     \printtext[parens]{\ifnumgreater{\value{pageref}}{1}   
-       {\bibstring{backrefpages}} 
-       {\bibstring{backrefpage}}
-       \printlist [pageref][-\value{listtotal}]{pageref}}}}    
+% \DefineBibliographyStrings{english}{%
+%   backrefpage = {Cited on page},
+%   backrefpages = {Cited on pages},
+% }
+% \renewbibmacro{pageref}{%
+%   \iflistundef{pageref}
+%     {\printtext[parens]{Not Cited}} 
+%     {%
+%      \printtext[parens]{\ifnumgreater{\value{pageref}}{1}   
+%        {\bibstring{backrefpages}} 
+%        {\bibstring{backrefpage}}
+%        \printlist [pageref][-\value{listtotal}]{pageref}}}}    
 
-\DeclareListFormat{pageref}{%
-     % == 2 references
-    \ifthenelse{\value{liststop} < 3}{\ifthenelse{\value{listcount}<\value{liststop}}{\hyperpage{#1} and }{\hyperpage{#1}}} %
-    { % > 2 references
-        \ifthenelse{\value{listcount}<\value{liststop}}
-          {\hyperpage{#1}\addcomma\addspace}
-          {\ifnumequal{\value{listcount}}{\value{liststop}}
-            {and \hyperpage{#1}}
-            {}%
-          }%
-    }%  
-}
+% \DeclareListFormat{pageref}{%
+%      % == 2 references
+%     \ifthenelse{\value{liststop} < 3}{\ifthenelse{\value{listcount}<\value{liststop}}{\hyperpage{#1} and }{\hyperpage{#1}}} %
+%     { % > 2 references
+%         \ifthenelse{\value{listcount}<\value{liststop}}
+%           {\hyperpage{#1}\addcomma\addspace}
+%           {\ifnumequal{\value{listcount}}{\value{liststop}}
+%             {and \hyperpage{#1}}
+%             {}%
+%           }%
+%     }%  
+% }
 

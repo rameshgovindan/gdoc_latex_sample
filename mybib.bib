@@ -1,27 +1,937 @@
-@INPROCEEDINGS { Moshref15a,
-    AUTHOR = {{ Masoud Moshref, Minlan Yu, Ramesh Govindan, Amin Vahdat }},
-    TITLE = { {SCREAM: Sketch Resource Allocation for Software-defined Measurement} },
-    BOOKTITLE = {{ ACM International Conference on emerging Networking EXperiments and Technologies (CoNEXT) }},
-    MONTH = { December },
-    LOCATION = { Heidelberg, Germany },
-    YEAR = { 2015 },
-    PROJECTS = { Software-definedMeasurement },
+@inproceedings{B4,
+ author = {Jain, Sushant and Kumar, Alok and Mandal, Subhasree and Ong, Joon and Poutievski, Leon and Singh, Arjun and Venkata, Subbaiah and Wanderer, Jim and Zhou, Junlan and Zhu, Min and Zolla, Jon and H\"{o}lzle, Urs and Stuart, Stephen and Vahdat, Amin},
+ title = {{B4: Experience with a Globally-deployed Software Defined WAN}},
+ booktitle = {{Proceedings of the ACM SIGCOMM 2013 Conference on SIGCOMM}},
+ series = {SIGCOMM '13},
+ year = {2013},
+ isbn = {978-1-4503-2056-6},
+ location = {Hong Kong, China},
+ pages = {3--14},
+ numpages = {12},
+ url = {http://doi.acm.org/10.1145/2486001.2486019},
+ doi = {10.1145/2486001.2486019},
+ acmid = {2486019},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {centralized traffic engineering, openflow, routing, software- defined networking, wide-area networks},
 }
 
-@InProceedings{PIC,
-  author = 	 {L. Pedrosa and  A. Fogel and  N. Kothari and  R. Govindan and  R. Mahajan and 
-                  T. Millstein},
-  title = 	 {{Analyzing Protocol Implementations for Interoperability}},
-  booktitle = {Proc. Usenix Symposium on Networked Systems Design
-                  and Implementation (NSDI)},
-  year = 	 2015}
+@article{Jupiter,
+ author = {Singh, Arjun and Ong, Joon and Agarwal, Amit and Anderson, Glen and Armistead, Ashby and Bannon, Roy and Boving, Seb and Desai, Gaurav and Felderman, Bob and Germano, Paulie and Kanagala, Anand and Provost, Jeff and Simmons, Jason and Tanda, Eiichi and Wanderer, Jim and H\"{o}lzle, Urs and Stuart, Stephen and Vahdat, Amin},
+ title = {{Jupiter Rising: A Decade of Clos Topologies and Centralized Control in Google's Datacenter Network}},
+ journal = {SIGCOMM Comput. Commun. Rev.},
+ issue_date = {October 2015},
+ volume = {45},
+ number = {5},
+ month = aug,
+ year = {2015},
+ issn = {0146-4833},
+ pages = {183--197},
+ numpages = {15},
+ url = {http://doi.acm.org/10.1145/2829988.2787508},
+ doi = {10.1145/2829988.2787508},
+ acmid = {2787508},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {centralized control and management, clos topology, datacenter networks, merchant silicon},
+}
 
-@INPROCEEDINGS {Aggres,
+@inproceedings{WCMP,
+ author = {Zhou, Junlan and Tewari, Malveeka and Zhu, Min and Kabbani, Abdul and Poutievski, Leon and Singh, Arjun and Vahdat, Amin},
+ title = {WCMP: Weighted Cost Multipathing for Improved Fairness in Data Centers},
+ booktitle = {Proceedings of the Ninth European Conference on Computer Systems},
+ series = {EuroSys '14},
+ year = {2014},
+ isbn = {978-1-4503-2704-6},
+ location = {Amsterdam, The Netherlands},
+ pages = {5:1--5:14},
+ articleno = {5},
+ numpages = {14},
+ url = {http://doi.acm.org/10.1145/2592798.2592803},
+ doi = {10.1145/2592798.2592803},
+ acmid = {2592803},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {ECMP, datacenter, hashing, multipath, routing},
+} 
+
+@inproceedings{BwE,
+ author = {Kumar, Alok and Jain, Sushant and Naik, Uday and Raghuraman, Anand and Kasinadhuni, Nikhil and Zermeno, Enrique Cauich and Gunn, C. Stephen and Ai, Jing and Carlin, Bj\"{o}rn and Amarandei-Stavila, Mihai and Robin, Mathieu and Siganporia, Aspi and Stuart, Stephen and Vahdat, Amin},
+ title = {{BwE: Flexible, Hierarchical Bandwidth Allocation for WAN Distributed Computing}},
+ booktitle = {{Proceedings of the 2015 ACM Conference on Special Interest Group on Data Communication}},
+ series = {SIGCOMM '15},
+ year = {2015},
+ isbn = {978-1-4503-3542-3},
+ location = {London, United Kingdom},
+ pages = {1--14},
+ numpages = {14},
+ url = {http://doi.acm.org/10.1145/2785956.2787478},
+ doi = {10.1145/2785956.2787478},
+ acmid = {2787478},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {bandwidth allocation, max-min fair, software-defined network, wide-area networks},
+}
+
+@misc{MPLSdummies,
+ author = {Richard A. Steenbergen},
+ title = {{MPLS for Dummies}},
+ howpublished = {Tutorial at NANOG 49},
+ year = 2010,
+ month = June,
+}
+
+@misc{MPLSAB,
+ author = {Richard A. Steenbergen},
+ title = {{MPLS-TE RSVP Auto-Bandwidth: Practical Lessons Learned}},
+ howpublished = {Talk at NANOG},
+ year = 2010,
+ month = June,
+}
+
+@misc{AF14,
+ author = {D. Grossman},
+ title = {{New Terminology and Clarifications for Diffserv}},
+ howpublished = {Internet Engineering Task Force, RFC 3260},
+ year = 2002,
+ month = April,
+}
+
+@misc{yang,
+ author = {M. Bjorklund},
+ title = {{YANG - A Data Modeling Language for the Network Configuration Protocol}},
+ howpublished = {Internet Engineering Task Force, RFC 6020},
+ year = 2010,
+ month = October,
+}
+
+@misc{vrrp,
+ author = {R. Hinden},
+ title = {{Virtual Router Redundancy Protocol}},
+ howpublished = {Internet Engineering Task Force, RFC 3768},
+ year = 2004,
+ month = April,
+}
+
+@misc{linden,
+ author = {G. Linden},
+ title = {{Make Data Useful}},
+ howpublished = {\url{http://sites.google.com/site/glinden/Home/StanfordDataMining.2006-11-28.ppt}},
+ year = 2006
+}
+
+@misc{reliab,
+ author = {C. Ashton},
+ title = {{What is the Real Cost of Network Downtime?}},
+ howpublished = {\url{http://www.lightreading.com/data-center/data-center-infrastructure/whats-the-real-cost-of-network-downtime/a/d-id/710595}},
+ year = 2014,
+}
+
+@misc{CiscoZ,
+ title = {{Cisco Visual Networking Index: The Zettabyte Era -- Trends and Analysis}},
+ howpublished = {\url{http://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/VNI_Hyperconnectivity_WP.html}},
+ year = 2014,
+}
+
+@misc{roce,
+ title = {{Will RDMA Over Ethernet Eclipse Infiniband?}},
+ howpublished = {\url{http://www.networkcomputing.com/networking/will-rdma-over-ethernet-eclipse-infiniband/a/d-id/1316950}},
+ year = 2014,
+}
+
+@misc{dind,
+ author = {{B. Schneier}},
+ title = {{Security in the Cloud}},
+ howpublished = {\url{https://www.schneier.com/blog/archives/2006/02/security_in_the.html}},
+ year = 2006,
+}
+
+@misc{mx2020,
+ title = {{Juniper Networks MX 2020}},
+ howpublished = {\url{http://www.juniper.net/elqNow/elqRedir.htm?ref=http://www.juniper.net/assets/us/en/local/pdf/datasheets/1000417-en.pdf}}
+}
+
+@misc{zdnTable,
+ title = {{Internet hiccups today? You're not alone. Here's why.}},
+ howpublished = {\url{http://www.zdnet.com/article/internet-hiccups-today-youre-not-alone-heres-why/}}
+}
+
+@misc{DeanLadis,
+ author = {Jeff Dean},
+ title = {{Designs, Lessons and Advice from Building Large Distributed Systems}},
+ howpublished = {Keynote at LADIS 2009}
+}
+
+@article{PingMesh,
+ author = {Guo, Chuanxiong and Yuan, Lihua and Xiang, Dong and Dang, Yingnong and Huang, Ray and Maltz, Dave and Liu, Zhaoyi and Wang, Vin and Pang, Bin and Chen, Hua and Lin, Zhi-Wei and Kurien, Varugis},
+ title = {{Pingmesh: A Large-Scale System for Data Center Network Latency Measurement and Analysis}},
+ journal = {{SIGCOMM Comput. Commun. Rev.}},
+ issue_date = {October 2015},
+ volume = {45},
+ number = {5},
+ month = aug,
+ year = {2015},
+ issn = {0146-4833},
+ pages = {139--152},
+ numpages = {14},
+ url = {http://doi.acm.org/10.1145/2829988.2787496},
+ doi = {10.1145/2829988.2787496},
+ acmid = {2787496},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {data center networking, network troubleshooting, silent packet drops},
+}
+
+@Article{Bailis,
+  author = 	 {{P. Bailis and K. Kingsbury}},
+  title = 	 {{An Informal Survey of Real-World Communications Failures}},
+  journal = 	 {{Communications of the ACM}},
+  year = 	 {2014},
+}
+
+@INPROCEEDINGS {condor,
+    AUTHOR = {{ Brandon Schlinker and Radhika Niranjan Mysore and Sean Smith and Jeffrey C. Mogul and Amin Vahdat and Minlan Yu and Ethan Katz-Bassett and Michael Rubin }},
+    TITLE = { Condor: Better Topologies Through Declarative Design },
+    BOOKTITLE = {{ Proceedings of the ACM Conference of the Special Interest Group on Data Communication (SIGCOMM '15) }},
+    YEAR = { 2015 },
+    MONTH = { August },
+    PUBLISHER = { ACM },
+    PDFURL = { http://nsl.cs.usc.edu/Papers/?action=download&upname=Schlinker15a.pdf },
+    PROJECTS = { Condor },
+}
+
+@inproceedings{MisconfigRatul,
+ author = {{R. Mahajan and D. Wetherall and T. Anderson}},
+ title = {{Understanding BGP Misconfiguration}},
+ booktitle = {{Proceedings of the 2002 Conference on Applications, Technologies, Architectures, and Protocols for Computer Communications}},
+ series = {SIGCOMM '02},
+ year = {2002},
+ isbn = {1-58113-570-X},
+ location = {Pittsburgh, Pennsylvania, USA},
+ pages = {3--16},
+ numpages = {14},
+ acmid = {633027},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@inproceedings{MisconfigNick,
+  title = {{Detecting BGP Configuration Faults with Static Analysis}}, 
+  author = {{N. Feamster and H. Balakrishnan}}, 
+  booktitle = {{Proceedings of the 2nd Symposium on Networked Systems Design and Implementation}}, 
+  organization = {USENIX Association}, 
+  year = {2005}, 
+  pages = {43--56}, 
+}
+
+@inproceedings {Fogel,
+author = {{Ari Fogel and Stanley Fung and Luis Pedrosa and Meg Walraed-Sullivan and Ramesh Govindan and Ratul Mahajan and Todd Millstein}},
+title = {{A General Approach to Network Configuration Analysis}},
+booktitle = {{12th USENIX Symposium on Networked Systems Design and Implementation (NSDI 15)}},
+year = {2015},
+month = May,
+isbn = {978-1-931971-218},
+address = {Oakland, CA},
+pages = {469--483},
+publisher = {USENIX Association},
+}
+
+@inproceedings {Lopes,
+author = {{Nuno P. Lopes and Nikolaj Bj{\o}rner and Patrice Godefroid and Karthick Jayaraman and George Varghese}},
+title = {{Checking Beliefs in Dynamic Networks}},
+booktitle = {{12th USENIX Symposium on Networked Systems Design and Implementation (NSDI 15)}},
+year = {2015},
+month = May,
+isbn = {978-1-931971-218},
+address = {Oakland, CA},
+pages = {499--512},
+publisher = {USENIX Association},
+}
+
+@article{doyle,
+  title = {{Highly Optimized Tolerance: Robustness and Design in Complex Systems}},
+  author = {{Carlson, J. M. and Doyle, John}},
+  journal = {{Phys. Rev. Lett.}},
+  volume = {84},
+  issue = {11},
+  pages = {2529--2532},
+  numpages = {0},
+  year = {2000},
+  month = {Mar},
+  publisher = {American Physical Society},
+}
+
+@ARTICLE{rushby,
+  TITLE = {{Critical System Properties: Survey and Taxonomy}},
+  AUTHOR = {John Rushby},
+  JOURNAL = {Reliability Engineering and System Safety},
+  PAGES = {189--219},
+  VOLUME = 43,
+  NUMBER = 2,
+  YEAR = 1994
+}
+
+@article{kuhn,
+  author    = {D. Richard Kuhn},
+  title     = {Sources of Failure in the Public Switched Telephone Network},
+  journal   = {{IEEE} Computer},
+  volume    = {30},
+  number    = {4},
+  pages     = {31--36},
+  year      = {1997},
+}
+
+@inproceedings {Libra,
+author = {{Hongyi Zeng and Shidong Zhang and Fei Ye and Vimalkumar Jeyakumar and Mickey Ju and Junda Liu and Nick McKeown and Amin Vahdat}},
+title = {{Libra: Divide and Conquer to Verify Forwarding Tables in Huge Networks}},
+booktitle = {{11th USENIX Symposium on Networked Systems Design and Implementation (NSDI 14)}},
+year = {2014},
+month = Apr,
+isbn = {978-1-931971-09-6},
+address = {Seattle, WA},
+pages = {87--99},
+}
+
+@inproceedings{SOFT,
+ author = {{M. Kuzniar and P. Peresini and M. Canini and D. Venzano and D. Kostic}},
+ title = {{A SOFT Way for Openflow Switch Interoperability Testing}},
+ booktitle = {{Proceedings of the 8th International Conference on Emerging Networking Experiments and Technologies}},
+ series = {CoNEXT '12},
+ year = {2012},
+ isbn = {978-1-4503-1775-7},
+ location = {Nice, France},
+ pages = {265--276},
+ numpages = {12},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@inproceedings {NICE,
+author = {{M. Canini and D. Venzano and P. Pere{\v s}{\'\i}ni and D. Kosti{\'c} and J. Rexford}},
+title = {{A NICE Way to Test OpenFlow Applications}},
+booktitle = {{Presented as part of the 9th USENIX Symposium on Networked Systems Design and Implementation (NSDI 12)}},
+year = 2012,
+isbn = {978-931971-92-8},
+address = {San Jose, CA},
+pages = {127--140},
+publisher = {USENIX},
+}
+
+@Article{abadi,
+  author = 	 {Daniel Abadi},
+  title = 	 {{Consistency Tradeoffs in Modern Distributed
+                  Database Design: CAP is Only Part of the Story}},
+  journal = 	 {IEEE Computer},
+  year = 	 2012}
+
+@misc{kafka,
+ author = {Andrew Montalenti},
+ title = {{Kafkapocalypse: A Post-Mortem on our Service Outage}},
+ howpublished = {Parse.ly Tech Blog post},
+ month = {March},
+ year = 2015
+}
+
+@misc{amazonEBS,
+ note = {Amazon Web Services},
+ title = {{Summary of the Amazon EC2 and Amazon RDS Service Disruption
+                  in the US East Region}},
+ howpublished = {\url{http://aws.amazon.com/message/65648/}},
+ year = 2011
+}
+
+
+@InProceedings{netwiser,
+  author = 	 {P. Gill and N. Jain and N. Nagappan},
+  title = 	 {{Understanding Network Failures in Data Centers: Measurement, Analysis, and Implications}},
+  booktitle = {{Proc. ACM SIGCOMM}},
+  year = 	 2011}
+
+@TechReport{ntttech,
+  author = 	 {{T. Kimura and K. Takeshita and T. Toyono and
+                  M. Yokota and K. Nishimatsu and T. Mori}},
+  title = 	 {{Network Failure Detection and Diagnosis by Analyzing Syslog and SNS Data: Applying Big Data Analysis to Network Operations}},
+  institution =  {NTT},
+  year = 	 2013}
+
+@InProceedings{cenic,
+  author = 	 {D. Turner and K. Levchenko and A. C. Snoeren and S. Savage},
+  title = 	 {{California Fault Lines: Understanding the Causes and Impact of Network Failures}},
+  booktitle = {{Proc. ACM SIGCOMM}},
+  year = 	 2010}
+
+@InProceedings{shaikhOSPF,
+  author = 	 {A. Shaikh and C. Isett and A. Greenberg and
+                  M. Roughan and J. Gottlieb},
+  title = 	 {{A Case Study of OSPF Behavior in a Large Enterprise Network}},
+  booktitle = {{Proc. ACM Internet Measurement Workshop}},
+  year = 	 2002}
+
+
+@InProceedings{watsonOSPF,
+  author = 	 {D. Watson and F. Jahanian and C. Labovitz},
+  title = 	 {{Experiences With Monitoring OSPF on a Regional Service Provider Network}},
+  booktitle = {{Proc. IEEE ICDCS}},
+  year = 	 2003}
+
+@Article{athina,
+  author = {A. Markopoulou and G. Iannaccone and S. Bhattacharyya and C.-N. Chuah and Y. Ganjali and C. Diot},
+  title = 	 {{Characterization of Failures in an Operational IP Backbone Network}},
+  journal = 	 {IEEE/ACM Transactions on Networking},
+  year = 	 2008}
+
+@InProceedings{labovitzAhuja,
+  author = 	 {Craig Labovitz and Abha Ahuja and Farnam Jahanian},
+  title = 	 {{Experimental Study of Internet Stability and Wide-Area Network Failures}},
+  booktitle = {{Proc. International Symposium on Fault-Tolerant Computing}},
+  year = 	 1999}
+
+@TechReport{HPTR,
+  author =  {D. Turner and K. Levchenko and J. C. Mogul and S. Savage
+                  and A. C. Snoeren},
+  title = 	 {{On Failure in Managed Enterprise Networks}},
+  institution = {HP Labs},                
+  year = 	 2012,
+  number = 	 {HPL-2012-101}}
+
+@InProceedings{tlssimc,
+  author = 	 {D. Turner and K. Levchenko and S. Savage, and A. C. Snoeren},
+  title = 	 {{A Comparison of Syslog and IS-IS for Network Failure Analysis}},
+  booktitle = {Proc. ACM Internet Measurement Conference},
+  year = 	 2011}
+
+@Article{softfails,
+  author = 	 {R. Charette},
+  title = 	 {{Why Software Fails}},
+  journal = 	 {IEEE Spectrum},
+  year = 	 2005}
+
+
+@Article{dirt,
+  author = 	 {K. Krishnan},
+  title = 	 {{Weathering the Unexpected}},
+  journal = 	 {{ACM Queue}},
+  year = 	 2012,
+  month = 	 {September}}
+
+@inproceedings{mapping,
+ author = {Calder, Matt and Fan, Xun and Hu, Zi and Katz-Bassett, Ethan and Heidemann, John and Govindan, Ramesh},
+ title = {{Mapping the Expansion of Google's Serving Infrastructure}},
+ booktitle = {{Proc. of the ACM Internet Measurement Conference (IMC '13)}},
+ year = {2013},
+}
+
+@INPROCEEDINGS {aggres,
     AUTHOR = { Tobias Flach and Nandita Dukkipati and Andreas Terzis and Barath Raghavan and Neal Cardwell and Yuchung Cheng and Ankur Jain and Shuai Hao and Ethan Katz-Bassett and Ramesh Govindan },
     TITLE = { {Reducing Web Latency: the Virtue of Gentle Aggression} },
-    BOOKTITLE = { Proceedings of the ACM Conference of the Special Interest Group on Data Communication (SIGCOMM '13) },
+    BOOKTITLE = {{Proc. of the ACM Conference of the Special Interest Group on Data Communication (SIGCOMM '13)}},
     MONTH = { August },
     YEAR = { 2013 },
-    PDFURL = { http://enl.usc.edu/Papers/?action=download&upname=Flach13a.pdf },
-    PROJECTS = { Recovery },
 }
+
+@inproceedings{Dean04mapreduce,
+    author = {Jeffrey Dean and Sanjay Ghemawat},
+    title = {MapReduce: simplified data processing on large clusters},
+    booktitle = {OSDI’04: Proceedings of the 6th Conference on Symposium on Operating Systems Design and Implementation (OSDI)},
+    year = {2004},
+    publisher = {USENIX Association}
+}
+
+@inproceedings{Krishnan09whyhigh,
+ author = {Krishnan, Rupa and Madhyastha, Harsha V. and Srinivasan, Sridhar and Jain, Sushant and Krishnamurthy, Arvind and Anderson, Thomas and Gao, Jie},
+ title = {Moving Beyond End-to-end Path Information to Optimize CDN Performance},
+ booktitle = {Proceedings of the 9th ACM SIGCOMM Conference on Internet Measurement},
+ series = {IMC '09},
+ year = {2009},
+ location = {Chicago, Illinois, USA},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+} 
+
+@article{Zhu12latlong,
+title = {LatLong: Diagnosing Wide-Area Latency Changes for CDNs},
+author  = {Yaping Zhu and Benjamin Helsley and Jennifer Rexford and Aspi Siganporia and Sridhar Srinivasan},
+year  = 2012,
+journal = {IEEE Transactions on Network and Service Management},
+volume  = {9}
+}
+
+@Misc{EspressoBlog,
+  OPTkey = 	 {},
+  author =	 {Amin Vahdat and Bikash Koley},
+  title =	 {Espresso makes {G}oogle cloud faster, more available and cost effective by extending {SDN} to the public {I}nternet},
+  howpublished = {Google Cloud Blog},
+  month =	 {April},
+  year =	 {2017},
+  note =	 {\url{https://blog.google/topics/google-cloud/making-google-cloud-faster-more-available-and-cost-effective-extending-sdn-public-internet-espresso/}},
+  OPTannote = 	 {}
+}
+
+@Misc{AlphabetAnnReport15,
+  OPTkey = 	 {},
+  OPTauthor = 	 {},
+  title =	 {Alphabet Annual Report},
+  OPThowpublished = {},
+  OPTmonth = 	 {},
+  year =	 {2015},
+  note =	 {\url{http://abc.xyz/investor}},
+  OPTannote = 	 {}
+}
+
+@InProceedings{Espresso,
+  author = 	 {KK Yap and others},
+  title = 	 {Taking the Edge off with {E}spresso: Scale, Reliability, and Programmability for Global {I}nternet Peering},
+  booktitle =	 {to appear in Proc. of ACM SIGCOMM},
+  month =	 {August},
+  year =	 {2017},
+  publisher = {ACM},
+}
+
+@Misc{EDNS,
+  OPTkey = 	 {},
+  author =	 {Carlo Contavalli and Wilmer van der Gaast and David
+                  C Lawrence and Warren Kumari},
+  title =	 {Client Subnet in {DNS} Queries},
+  howpublished = {Internet RFC 7871},
+  month =	 {May},
+  year =	 {2016},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@inproceedings{Chen15EndUserMapping,
+ author = {Chen, Fangfei and Sitaraman, Ramesh K. and Torres, Marcelo},
+ title = {End-User Mapping: Next Generation Request Routing for Content Delivery},
+ booktitle = {Proceedings of the 2015 ACM Conference on Special Interest Group on Data Communication},
+ series = {SIGCOMM '15},
+ year = {2015},
+ isbn = {978-1-4503-3542-3},
+ location = {London, United Kingdom},
+ pages = {167--181},
+ numpages = {15},
+ url = {http://doi.acm.org/10.1145/2785956.2787500},
+ doi = {10.1145/2785956.2787500},
+ acmid = {2787500},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {DNS, akamai, content delivery networks, load balancing, name servers, network measurement, request routing, server assignment, web performance},
+} 
+
+@article{DataFlow,
+title = {The Dataflow Model: A Practical Approach to Balancing Correctness, Latency, and Cost in Massive-Scale, Unbounded, Out-of-Order Data Processing},
+author  = {Tyler Akidau and Robert Bradshaw and Craig Chambers and Slava Chernyak and Rafael J. Fernández-Moctezuma and Reuven Lax and Sam McVeety and Daniel Mills and Frances Perry and Eric Schmidt and Sam Whittle},
+year  = 2015,
+journal = {Proceedings of the VLDB Endowment},
+pages = {1792-1803},
+volume  = {8}
+}
+
+@inproceedings{eyeballAS,
+ author = {Rasti, Amir H. and Magharei, Nazanin and Rejaie, Reza and Willinger, Walter},
+ title = {Eyeball ASes: From Geography to Connectivity},
+ booktitle = {Proceedings of the 10th ACM SIGCOMM Conference on Internet Measurement},
+ series = {IMC '10},
+ year = {2010},
+ isbn = {978-1-4503-0483-2},
+ location = {Melbourne, Australia},
+ pages = {192--198},
+ numpages = {7},
+ url = {http://doi.acm.org/10.1145/1879141.1879165},
+ doi = {10.1145/1879141.1879165},
+ acmid = {1879165},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {as geography, autonomous system (AS), eyeball AS, point-of-presence (POP)},
+} 
+
+@inproceedings{akamai-mapping-sigcomm15,
+ author = {Chen, Fangfei and Sitaraman, Ramesh K. and Torres, Marcelo},
+ title = {End-User Mapping: Next Generation Request Routing for Content Delivery},
+ series = {SIGCOMM '15},
+}
+
+@inproceedings{microsoft-anycast-nsdi15,
+ author = {Flavel, Ashley and Mani, Pradeepkumar and Maltz, David A. and Holt, Nick and Liu, Jie and Chen, Yingying and Surmachev, Oleg},
+ title = {FastRoute: A Scalable Load-Aware Anycast Routing Architecture for Modern {CDNs}},
+ series = {NSDI '15},
+}
+
+@inproceedings{yahoo-video-imc16,
+ author = {Ghasemi, Mojgan and Kanuparthy, Partha and Mansy, Ahmed and Benson, Theophilus and Rexford, Jennifer},
+ title = {Performance Characterization of a Commercial Video Streaming Service},
+ series = {SIGCOMM '15},
+}
+
+@inproceedings{planetseer-osdi04,
+ author = {Zhang, Ming and Zhang, Chi and Pai, Vivek S and Peterson, Larry L and Wang, Randolph Y},
+ title = {{PlanetSeer}: {Internet} Path Failure Monitoring and Characterization in Wide-Area Services},
+ series = {OSDI '04},
+}
+
+@inproceedings{cdn-performance-bottleneck,
+  title={Identifying performance bottlenecks in CDNs through TCP-level monitoring},
+  author={Sun, Peng and Yu, Minlan and Freedman, Michael J and Rexford, Jennifer},
+  booktitle={Proceedings of the first ACM SIGCOMM workshop on Measurements up the stack},
+  pages={49--54},
+  year={2011},
+  organization={ACM}
+}
+
+% characterize CDNs from an outsider’s perspective
+@inproceedings{mapping-google-imc13,
+ author = {Calder, Matt and Fan, Xun and Hu, Zi and Katz-Bassett, Ethan and Heidemann, John and Govindan, Ramesh},
+ title = {Mapping the expansion of {Google's} serving infrastructure},
+ series = {IMC '13},
+}
+
+@inproceedings{one-hop-imc15,
+ author = {Chiu, Yi-Ching and Schlinker, Brandon and Radhakrishnan, Abhishek Balaji and Katz-Bassett, Ethan and Govindan, Ramesh},
+ title = {Are We One Hop Away from a Better {Internet}?},
+ series = {IMC '15},
+}
+
+@inproceedings{measuring-cdns-imc08,
+ author = {Huang, Cheng and Wang, Angela and Li, Jin and Ross, Keith W},
+ title = {Measuring and evaluating large-scale {CDNs}},
+ series = {IMC '08},
+}
+
+% BGP anomaly detection/root cause analysis 
+@inproceedings{locating-routing-instabilities-sigcomm04,
+ author = {Feldmann, Anja and Maennel, Olaf and Mao, Z Morley and Berger, Arthur and Maggs, Bruce},
+ title = {Locating {Internet} routing instabilities},
+ series = {SIGCOMM '04},
+}
+
+@inproceedings{pinpointing-bgp-changes-nsdi05,
+ author = {Wu, Jian and Mao, Zhuoqing Morley and Rexford, Jennifer and Wang, Jia},
+ title = {Finding a needle in a haystack: Pinpointing significant {BGP} routing changes in an {IP} network},
+ series = {NSDI '05},
+}
+
+@inproceedings{poiroot-sigcomm13,
+ author = {Javed, Umar and Cunha, Italo and Choffnes, David and Katz-Bassett, Ethan and Anderson, Thomas and Krishnamurthy, Arvind},
+ title = {Poiroot: Investigating the root cause of interdomain path changes},
+ series = {SIGCOMM '13},
+}
+
+@inproceedings{pathminer-imc14,
+ author = {Comarela, Giovanni and Crovella, Mark},
+ title = {Identifying and Analyzing High Impact Routing Events with {PathMiner}},
+ series = {IMC '14},
+}
+
+@inproceedings{GoogleFailures,
+ author = {Govindan, Ramesh and Minei, Ina and Kallahalla, Mahesh and Koley, Bikash and Vahdat, Amin},
+ title = {Evolve or Die: High-Availability Design Principles Drawn from Googles Network Infrastructure},
+ booktitle = {Proceedings of the 2016 ACM SIGCOMM Conference},
+ series = {SIGCOMM '16},
+ year = 2016,
+ isbn = {978-1-4503-4193-6},
+ location = {Florianopolis, Brazil},
+ pages = {58--72},
+ numpages = 15,
+ url = {http://doi.acm.org/10.1145/2934872.2934891},
+ doi = {10.1145/2934872.2934891},
+ acmid = 2934891,
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Availability; Control Plane; Management Plane},
+} 
+
+@Book{MPLSIna,
+  author =       {I. Minei and J. Lucek},
+  title =        {{MPLS-Enabled Applications: Emerging Developments and New Technologies}},
+  publisher =    {Wiley Inc.},
+  year =         2015,
+  edition =      {3rd}}
+
+@article{JJDual,
+ author = {Garcia-Lunes-Aceves, J. J.},
+ title = {{Loop-free Routing Using Diffusing Computations}},
+ journal = {IEEE/ACM Trans. Netw.},
+ issue_date = {Feb. 1993},
+ volume = {1},
+ number = {1},
+ month = feb,
+ year = {1993},
+ issn = {1063-6692},
+ pages = {130--141},
+ numpages = {12},
+ url = {http://dx.doi.org/10.1109/90.222913},
+ doi = {10.1109/90.222913},
+ acmid = {168680},
+ publisher = {IEEE Press},
+ address = {Piscataway, NJ, USA},
+}
+
+@article{JaffeMoss,
+author = {JM, Jaffe and FM, Moss},
+year = {1982},
+month = {08},
+pages = {1758 - 1762},
+title = {{A Responsive Distributed Routing Algorithm for Computer Networks}},
+volume = {30},
+booktitle = {{IEEE Transactions on Communications}}
+}
+
+@inproceedings{HeaderSpace,
+ author = {Kazemian, Peyman and Varghese, George and McKeown, Nick},
+ title = {Header Space Analysis: Static Checking for Networks},
+ booktitle = {Proceedings of the 9th USENIX Conference on Networked Systems Design and Implementation},
+ series = {NSDI'12},
+ year = {2012},
+ location = {San Jose, CA},
+ pages = {9--9},
+ numpages = {1},
+ url = {http://dl.acm.org/citation.cfm?id=2228298.2228311},
+ acmid = {2228311},
+ publisher = {USENIX Association},
+ address = {Berkeley, CA, USA},
+}
+
+@ARTICLE{MerlinSegall,
+author={P. Merlin and A. Segall}, 
+journal={IEEE Transactions on Communications}, 
+title={A Failsafe Distributed Routing Protocol}, 
+year=1979, 
+volume=27, 
+number=9, 
+pages={1280-1287}, 
+month={Sep},}
+
+@inproceedings{SommersMPLS,
+ author = {Sommers, Joel and Barford, Paul and Eriksson, Brian},
+ title = {{On the Prevalence and Characteristics of MPLS Deployments in the Open Internet}},
+ booktitle = {Proceedings of the 2011 ACM SIGCOMM Conference on Internet Measurement Conference},
+ series = {IMC '11},
+ year = {2011},
+ isbn = {978-1-4503-1013-0},
+ location = {Berlin, Germany},
+ pages = {445--462},
+ numpages = {18},
+ url = {http://doi.acm.org/10.1145/2068816.2068858},
+ doi = {10.1145/2068816.2068858},
+ acmid = {2068858},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {MPLS, traceroute, traffic engineering tunnels},
+}
+
+@article{ShaikhStability,
+ author = {Shaikh, Aman and Varma, Anujan and Kalampoukas, Lampros and Dube, Rohit},
+ title = {Routing Stability in Congested Networks: Experimentation and Analysis},
+ journal = {SIGCOMM Comput. Commun. Rev.},
+ issue_date = {October 2000},
+ volume = {30},
+ number = {4},
+ month = aug,
+ year = {2000},
+ issn = {0146-4833},
+ pages = {163--174},
+ numpages = {12},
+ url = {http://doi.acm.org/10.1145/347057.347426},
+ doi = {10.1145/347057.347426},
+ acmid = {347426},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@misc{SoftPreemption,
+	series =	{Request for Comments},
+	number =	5712,
+	howpublished =	{RFC 5712},
+	publisher =	{RFC Editor},
+	doi =		{10.17487/RFC5712},
+	url =		{https://rfc-editor.org/rfc/rfc5712.txt},
+        author =	{Matthew Meyer and JP Vasseur},
+	title =		{{MPLS Traffic Engineering Soft Preemption}},
+	pagetotal =	13,
+	year =		2010,
+	month =		jan,
+	abstract =	{This document specifies Multiprotocol Label Switching (MPLS) Traffic Engineering Soft Preemption, a suite of protocol modifications extending the concept of preemption with the goal of reducing or eliminating traffic disruption of preempted Traffic Engineering Label Switched Paths (TE LSPs). Initially, MPLS RSVP-TE was defined with support for only immediate TE LSP displacement upon preemption. The utilization of a reroute request notification helps more gracefully mitigate the reroute process of preempted TE LSP. For the brief period soft preemption is activated, reservations (though not necessarily traffic levels) are in effect under-provisioned until the TE LSP(s) can be rerouted. For this reason, the feature is primarily, but not exclusively, interesting in MPLS-enabled IP networks with Differentiated Services and Traffic Engineering capabilities. [STANDARDS-TRACK]},
+}
+
+@misc{rfc5036,
+	series =	{Request for Comments},
+	number =	5036,
+	howpublished =	{RFC 5036},
+	publisher =	{RFC Editor},
+	doi =		{10.17487/RFC5036},
+	url =		{https://rfc-editor.org/rfc/rfc5036.txt},
+        author =	{Bob Thomas and Loa Andersson and Ina Minei},
+	title =		{{LDP Specification}},
+	pagetotal =	135,
+	year =		2007,
+	month =		oct,
+	abstract =	{The architecture for Multiprotocol Label Switching (MPLS) is described in RFC 3031. A fundamental concept in MPLS is that two Label Switching Routers (LSRs) must agree on the meaning of the labels used to forward traffic between and through them. This common understanding is achieved by using a set of procedures, called a label distribution protocol, by which one LSR informs another of label bindings it has made. This document defines a set of such procedures called LDP (for Label Distribution Protocol) by which LSRs distribute labels to support MPLS forwarding along normally routed paths. [STANDARDS-TRACK]},
+}
+
+@misc{IGPLD,
+	series =	{Request for Comments},
+	number =	5443,
+	howpublished =	{RFC 5443},
+	publisher =	{RFC Editor},
+	doi =		{10.17487/RFC5443},
+	url =		{https://rfc-editor.org/rfc/rfc5443.txt},
+        author =	{Markus Jork and Alia Atlas and Luyuan Fang},
+	title =		{{LDP IGP Synchronization}},
+	pagetotal =	7,
+	year =		2009,
+	month =		mar,
+	abstract =	{In certain networks, there is dependency on the edge-to-edge Label Switched Paths (LSPs) setup by the Label Distribution Protocol (LDP), e.g., networks that are used for Multiprotocol Label Switching (MPLS) Virtual Private Network (VPN) applications. For such applications, it is not possible to rely on Internet Protocol (IP) forwarding if the MPLS LSP is not operating appropriately. Blackholing of labeled traffic can occur in situations where the Interior Gateway Protocol (IGP) is operational on a link on which LDP is not. While the link could still be used for IP forwarding, it is not useful for MPLS forwarding, for example, MPLS VPN applications or Border Gateway Protocol (BGP) route-free cores. This document describes a mechanism to avoid traffic loss due to this condition without introducing any protocol changes. This memo provides information for the Internet community.},
+}
+
+@misc{SelfPing,
+	series =	{Request for Comments},
+	number =	7746,
+	howpublished =	{RFC 7746},
+	publisher =	{RFC Editor},
+	doi =		{10.17487/RFC7746},
+	url =		{https://rfc-editor.org/rfc/rfc7746.txt},
+        author =	{Ron Bonica and Ina Minei and Michael Conn and Dante Pacella and Luis Tomotaki},
+	title =		{{Label Switched Path (LSP) Self-Ping}},
+	pagetotal =	12,
+	year =		2016,
+	month =		jan,
+	abstract =	{When certain RSVP-TE optimizations are implemented, ingress Label Switching Router (LSRs) can receive RSVP RESV messages before forwarding state has been installed on all downstream nodes. According to the RSVP-TE specification, the ingress LSR can forward traffic through a Label Switched Path (LSP) as soon as it receives a RESV message. However, if the ingress LSR forwards traffic through the LSP before forwarding state has been installed on all downstream nodes, traffic can be lost.},
+}
+
+@misc{rfc3630,
+	series =	{Request for Comments},
+	number =	3630,
+	howpublished =	{RFC 3630},
+	publisher =	{RFC Editor},
+	doi =		{10.17487/RFC3630},
+	url =		{https://rfc-editor.org/rfc/rfc3630.txt},
+        author =	{Derek M. Yeung and Dave Katz and Kireeti Kompella},
+	title =		{{Traffic Engineering (TE) Extensions to OSPF Version 2}},
+	pagetotal =	14,
+	year =		2003,
+	month =		oct,
+	abstract =	{This document describes extensions to the OSPF protocol version 2 to support intra-area Traffic Engineering (TE), using Opaque Link State Advertisements.},
+}
+
+@misc{OverloadBit,
+	series =	{Request for Comments},
+	number =	3277,
+	howpublished =	{RFC 3277},
+	publisher =	{RFC Editor},
+	doi =		{10.17487/RFC3277},
+	url =		{https://rfc-editor.org/rfc/rfc3277.txt},
+        author =	{Danny R. McPherson},
+	title =		{{Intermediate System to Intermediate System (IS-IS) Transient Blackhole Avoidance}},
+	pagetotal =	6,
+	year =		2002,
+	month =		apr,
+	day =		1,
+	abstract =	{This document describes a simple, interoperable mechanism that can be employed in Intermediate System to Intermediate System (IS-IS) networks in order to decrease the data loss associated with deterministic blackholing of packets during transient network conditions. The mechanism proposed here requires no IS-IS protocol changes and is completely interoperable with the existing IS-IS specification. This memo provides information for the Internet community.},
+}
+
+@misc{GracefulRestart,
+	series =	{Request for Comments},
+	number =	4724,
+	howpublished =	{RFC 4724},
+	publisher =	{RFC Editor},
+	doi =		{10.17487/RFC4724},
+	url =		{https://rfc-editor.org/rfc/rfc4724.txt},
+        author =	{Yakov Rekhter and John Scudder and Srihari S. Ramachandra and Enke Chen and Rex Fernando},
+	title =		{{Graceful Restart Mechanism for BGP}},
+	pagetotal =	15,
+	year =		2007,
+	month =		jan,
+	abstract =	{This document describes a mechanism for BGP that would help minimize the negative effects on routing caused by BGP restart. An End-of-RIB marker is specified and can be used to convey routing convergence information. A new BGP capability, termed &quot;Graceful Restart Capability&quot;, is defined that would allow a BGP speaker to express its ability to preserve forwarding state during BGP restart. Finally, procedures are outlined for temporarily retaining routing information across a TCP session termination/re-establishment.},
+}
+
+@inproceedings{DelayedConvergence,
+ author = {Labovitz, Craig and Ahuja, Abha and Bose, Abhijit and Jahanian, Farnam},
+ title = {Delayed Internet Routing Convergence},
+ booktitle = {Proceedings of the Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication},
+ series = {SIGCOMM '00},
+ year = {2000},
+ isbn = {1-58113-223-9},
+ location = {Stockholm, Sweden},
+ pages = {175--187},
+ numpages = {13},
+ url = {http://doi.acm.org/10.1145/347059.347428},
+ doi = {10.1145/347059.347428},
+ acmid = {347428},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@inproceedings{BasuOscillations,
+ author = {Basu, Anindya and Ong, Chih-Hao Luke and Rasala, April and Shepherd, F. Bruce and Wilfong, Gordon},
+ title = {Route Oscillations in I-BGP with Route Reflection},
+ booktitle = {Proceedings of the 2002 Conference on Applications, Technologies, Architectures, and Protocols for Computer Communications},
+ series = {SIGCOMM '02},
+ year = {2002},
+ isbn = {1-58113-570-X},
+ location = {Pittsburgh, Pennsylvania, USA},
+ pages = {235--247},
+ numpages = {13},
+ url = {http://doi.acm.org/10.1145/633025.633048},
+ doi = {10.1145/633025.633048},
+ acmid = {633048},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {I-BGP, route oscillations, route reflection, stability},
+}
+
+@inproceedings{GriffinOscillations,
+ author = {Griffin, Timothy G. and Wilfong, Gordon},
+ title = {An Analysis of BGP Convergence Properties},
+ booktitle = {Proceedings of the Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication},
+ series = {SIGCOMM '99},
+ year = {1999},
+ isbn = {1-58113-135-6},
+ location = {Cambridge, Massachusetts, USA},
+ pages = {277--288},
+ numpages = {12},
+ url = {http://doi.acm.org/10.1145/316188.316231},
+ doi = {10.1145/316188.316231},
+ acmid = {316231},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@article{VaradhanOscillations,
+  author    = {Kannan Varadhan and
+               Ramesh Govindan and
+               Deborah Estrin},
+  title     = {Persistent route oscillations in inter-domain routing},
+  journal   = {Computer Networks},
+  volume    = {32},
+  number    = {1},
+  pages     = {1--16},
+  year      = {2000},
+  url       = {https://doi.org/10.1016/S1389-1286(99)00108-5},
+  doi       = {10.1016/S1389-1286(99)00108-5},
+  timestamp = {Thu, 18 May 2017 01:00:00 +0200},
+  biburl    = {http://dblp.org/rec/bib/journals/cn/VaradhanGE00},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@inproceedings{FlapDamping,
+ author = {Mao, Zhuoqing Morley and Govindan, Ramesh and Varghese, George and Katz, Randy H.},
+ title = {Route Flap Damping Exacerbates Internet Routing Convergence},
+ booktitle = {Proceedings of the 2002 Conference on Applications, Technologies, Architectures, and Protocols for Computer Communications},
+ series = {SIGCOMM '02},
+ year = {2002},
+ isbn = {1-58113-570-X},
+ location = {Pittsburgh, Pennsylvania, USA},
+ pages = {221--233},
+ numpages = {13},
+ url = {http://doi.acm.org/10.1145/633025.633047},
+ doi = {10.1145/633025.633047},
+ acmid = {633047},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {BGP, border gateway protocol, interdomain routing protocol, route flap damping, routing convergence, routing dynamics},
+}
+
+@Misc{junos_overload,
+  author = 	 {{Juniper Networks}},
+  title = 	 {{IS-IS overload}},
+  howpublished = {{JunOS Technical Library: IS-IS Feature Guide}}}
+
